@@ -1,5 +1,4 @@
 import argparse
-from typing import Tuple, Any
 
 
 def get_args() -> tuple[str, str]:
@@ -10,11 +9,11 @@ def get_args() -> tuple[str, str]:
     return args.name, args.file
 
 
-def print_hi(input_name):
+def print_hi(input_name: str) -> None:
     print(f'Hi, {input_name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-def print_file(path):
+def print_file(path: str) -> None:
     with open(path) as file:
         print(file.read())
 
