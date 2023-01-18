@@ -1,4 +1,5 @@
 import argparse
+import os
 
 
 def get_args() -> tuple[str, str]:
@@ -6,7 +7,9 @@ def get_args() -> tuple[str, str]:
     parser.add_argument("--name", help="user's name")
     parser.add_argument("--file", help="file's path")
     args = parser.parse_args()
-    return args.name, args.file
+    name = os.getenv('JOB_USER') if os.getenv('JOB_USER') else args.name
+
+    return name, args.file
 
 
 def print_hi(input_name: str) -> None:
@@ -19,8 +22,9 @@ def print_file(path: str) -> None:
 
 
 if __name__ == '__main__':
-    name, file_path = get_args()
 
-    print_hi(name)
+    user_name, file_path = get_args()
+
+    print_hi(user_name)
     print_file(file_path)
 
