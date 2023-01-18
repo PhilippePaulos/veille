@@ -27,4 +27,3 @@ COPY . .
 
 # Run the application
 ENTRYPOINT ["python", "-m", "python_docker.main"]
-# CMD ["python", "-m", "retrieve_files.runner"]
