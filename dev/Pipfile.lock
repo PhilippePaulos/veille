@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9c8eb25b27dea688a8daa6366235e366c256e340788563b1da113aaa1ff982c6"
+            "sha256": "b85b5c856cbd6f57dd5e72aec85205845f27e465b5e7a9fabaff445893097f56"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -283,6 +283,13 @@
             "index": "pypi",
             "version": "==2.0.1"
         },
+        "py4j": {
+            "hashes": [
+                "sha256:0b6e5315bb3ada5cf62ac651d107bb2ebc02def3dee9d9548e3baac644ea8dbb",
+                "sha256:85defdfd2b2376eb3abf5ca6474b51ab7e0de341c75a02f46dc9b5976f5a5c1b"
+            ],
+            "version": "==0.10.9.7"
+        },
         "pygame": {
             "hashes": [
                 "sha256:00ecd4688ee25d5d4cf48eddab18749a9bb2b382772f7fa8a987e4d21026c603",
@@ -357,6 +364,13 @@
             "index": "pypi",
             "version": "==2.4.0"
         },
+        "pyspark": {
+            "hashes": [
+                "sha256:167a23e11854adb37f8602de6fcc3a4f96fd5f1e323b9bb83325f38408c5aafd"
+            ],
+            "index": "pypi",
+            "version": "==3.4.0"
+        },
         "python-dateutil": {
             "hashes": [
                 "sha256:0123cacc1627ae19ddf3c27a5de5bd67ee4586fbdd6440d9748f8abb483d3e86",
@@ -374,11 +388,11 @@
         },
         "requests": {
             "hashes": [
-                "sha256:10e94cc4f3121ee6da529d358cdaeaff2f1c409cd377dbc72b825852f2f7e294",
-                "sha256:239d7d4458afcb28a692cdd298d87542235f4ca8d36d03a15bfc128a6559a2f4"
+                "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f",
+                "sha256:942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
             ],
             "index": "pypi",
-            "version": "==2.30.0"
+            "version": "==2.31.0"
         },
         "six": {
             "hashes": [
