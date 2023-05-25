@@ -81,7 +81,7 @@ if __name__ == '__main__':
     print(f'Square result = {compute_square([1,2,3,4,5])}')
     print(f'Celsius result: {compute_celsius([32, 212, 98.6])}')
     print(f'Occurences: {count_occurences("apple banana apple strawberry banana lemon")}')
-    inspect_file('Pipfile')
+    inspect_file('../Pipfile')
     compute_circle()
     compute_dataframe()
     request_api()
