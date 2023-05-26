@@ -3,7 +3,7 @@ import importlib.resources
 import numpy as np
 import pandas as pd
 
-from common.helpers import get_resources_file
+from common.fs import get_resources_file
 
 
 def read_file_as_df(path: str, **options) -> pd.DataFrame:
