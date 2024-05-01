@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch
 from injector import Injector, singleton
 
-from injection.injection import ProviderModule, Configuration, Provider
+from injection.app import ProviderModule, Configuration, Provider
 
 
 def configure_for_aws(binder):
@@ -22,17 +22,12 @@ class TestProviderMount(unittest.TestCase):
         mock_aws.return_value.mount.return_value = "aws://mocked-bucket"
         mock_azure.return_value.mount.return_value = "azure://mocked-storage"
 
-        injector = Injector(
-            [configure_for_aws, ProviderModule()]
-        )
+        injector = Injector([configure_for_aws, ProviderModule()])
         aws_provider = injector.get(Provider)
 
         self.assertEqual(aws_provider.mount(), "aws://mocked-bucket")
 
-        injector = Injector(
-            [configure_for_azure, ProviderModule()]
-        )
+        injector = Injector([configure_for_azure, ProviderModule()])
         azure_provider = injector.get(Provider)
 
         self.assertEqual(azure_provider.mount(), "azure://mocked-storage")
-
