@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import patch
 from injector import Injector, singleton
 
-from veille.injection import ProviderModule, Provider, Configuration
+from injection.injection import ProviderModule, Configuration, Provider
 
 
 def configure_for_aws(binder):
@@ -16,8 +16,8 @@ def configure_for_azure(binder):
 
 
 class TestProviderMount(unittest.TestCase):
-    @patch("veille.injection.AWSProvider")
-    @patch("veille.injection.AzureProvider")
+    @patch("injection.AWSProvider")
+    @patch("injection.AzureProvider")
     def test_aws_provider_mount(self, mock_azure, mock_aws):
         mock_aws.return_value.mount.return_value = "aws://mocked-bucket"
         mock_azure.return_value.mount.return_value = "azure://mocked-storage"
