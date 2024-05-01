@@ -1,5 +1,7 @@
 package recursivity
 
+import utils.Display
+
 import scala.annotation.tailrec
 
 object Solution {
@@ -21,12 +23,25 @@ object Solution {
     romanToIntRecursive(s.toList, 0)
   }
 
+  def romanToIntFold(s: String): Int = {
+    s.foldLeft((0, 0)) {
+      case ((sum, last), current) =>
+        val value = ROMAN_MAP(current)
+        if (value > last) (sum + value - 2 * last, value) else (sum + value, value)
+    }._1
+  }
+
 }
 
-object Main extends App{
+object Main extends App with Display {
 
-  println(Solution.romanToInt("III"))
-  println(Solution.romanToInt("LVIII"))
-  println(Solution.romanToInt("MCMXCIV"))
+  val exos = Seq(
+    Solution.romanToInt("III"),
+    Solution.romanToInt("LVIII"),
+    Solution.romanToInt("MCMXCIV"),
+    Solution.romanToIntFold("MCMXCIV")
+  )
+
+  exos.foreach(res => res.show())
 
 }

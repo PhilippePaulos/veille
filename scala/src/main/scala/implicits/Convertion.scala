@@ -1,5 +1,7 @@
 package implicits
 
+import utils.Display
+
 trait Converter[T] {
     def convert(s: String): T
 }
@@ -18,8 +20,8 @@ object Solution {
   }
 }
 
-object Convertion extends App {
+object Convertion extends App with Display{
   import Converters._
 
-  println(Solution.convert[Int]("123"))
+  Solution.convert[Int]("123").show()
 }

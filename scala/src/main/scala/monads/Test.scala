@@ -1,4 +1,4 @@
-package nomades
+package monads
 
 import scala.util.{Try, Success, Failure}
 
@@ -16,7 +16,6 @@ object Test extends App {
 
 
   // Try
-
   def divide(dividend: Int, divisor: Int): Try[Int] = {
     Try(dividend / divisor)
   }

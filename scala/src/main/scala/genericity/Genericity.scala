@@ -1,8 +1,10 @@
 package genericity
 
+import utils.Display
+
 import scala.annotation.tailrec
 
-object Genericity extends App {
+object Genericity extends App with Display {
 
   private def max[T](list: List[T], cmp: (T, T) => Boolean): Option[T] = {
 
@@ -19,7 +21,6 @@ object Genericity extends App {
 
 
   var strings = List("foo", "baro", "baz")
-  //  strings = List()
   val longestString = max(strings, (s1: String, s2: String) => s1.length > s2.length)
   println(longestString)
   longestString.foreach(e => f"Max is ${e}")
